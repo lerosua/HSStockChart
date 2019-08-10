@@ -15,6 +15,8 @@ public enum HSChartType: Int {
     case kLineForDay
     case kLineForWeek
     case kLineForMonth
+    case kLineForSeason
+    case kLineForYear
 }
 
 protocol HSDrawLayerProtocol {
