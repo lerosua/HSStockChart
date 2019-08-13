@@ -30,7 +30,11 @@ public class HSKLineView: UIView {
     var dataK: [HSKLineModel] = []
     
     public var isLandscapeMode = false
-    public var isDark = false
+    public var isDark = false {
+        didSet{
+            theme.setupDarkTheme(self.isDark)
+        }
+    }
 
     public var allDataK: [HSKLineModel] = []
     var enableKVO: Bool = true

@@ -22,7 +22,11 @@ public class HSKLine: UIView, HSDrawLayerProtocol {
     var kLineType: HSChartType = HSChartType.kLineForDay
     var theme = HSKLineStyle()
     
-    public var isDark = false
+    public var isDark = false {
+        didSet{
+            theme.setupDarkTheme(self.isDark)
+        }
+    }
 
     var dataK: [HSKLineModel] = []
     var positionModels: [HSKLineCoordModel] = []
