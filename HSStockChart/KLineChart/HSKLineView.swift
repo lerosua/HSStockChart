@@ -55,7 +55,6 @@ public class HSKLineView: UIView {
     
     public init(frame: CGRect, kLineType: HSChartType) {
         super.init(frame: frame)
-        backgroundColor = UIColor.white
         
         drawFrameLayer()
         
@@ -106,9 +105,9 @@ public class HSKLineView: UIView {
         dataK = data
         kLine.isDark = self.isDark
         kLine.dataK = data
-        
         theme.setupDarkTheme(self.isDark)
-        
+        backgroundColor = self.isDark ? theme.fillColor : UIColor.white
+
         let count: CGFloat = CGFloat(data.count)
         
         // 总长度
