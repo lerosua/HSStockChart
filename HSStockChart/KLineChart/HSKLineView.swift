@@ -30,6 +30,7 @@ public class HSKLineView: UIView {
     var dataK: [HSKLineModel] = []
     
     public var isLandscapeMode = false
+    public var isDark = false
 
     public var allDataK: [HSKLineModel] = []
     var enableKVO: Bool = true
@@ -99,7 +100,11 @@ public class HSKLineView: UIView {
     
     public func configureView(data: [HSKLineModel]) {
         dataK = data
+        kLine.isDark = self.isDark
         kLine.dataK = data
+        
+        theme.setupDarkTheme(self.isDark)
+        
         let count: CGFloat = CGFloat(data.count)
         
         // 总长度
