@@ -53,7 +53,6 @@ public class HSTimeLine: UIView, HSDrawLayerProtocol {
     
     public var dataT: [HSTimeLineModel] = [] {
         didSet {
-            theme.setupDarkTheme(self.isDark)
             self.drawTimeLineChart()
         }
     }
@@ -112,7 +111,9 @@ public class HSTimeLine: UIView, HSDrawLayerProtocol {
     }
     
     // 绘图
-    func drawTimeLineChart() {
+    public func drawTimeLineChart() {
+        theme.setupDarkTheme(self.isDark)
+
         setMaxAndMinData()
         convertToPoints(data: dataT)
         clearLayer()
