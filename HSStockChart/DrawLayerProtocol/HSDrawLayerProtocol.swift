@@ -37,7 +37,7 @@ extension HSDrawLayerProtocol {
     var theme: HSTimeLineStyle {
         return HSTimeLineStyle()
     }
-    
+
     func drawLine(lineWidth: CGFloat,
                   startPoint: CGPoint,
                   endPoint: CGPoint,

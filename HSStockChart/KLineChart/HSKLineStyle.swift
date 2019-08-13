@@ -33,8 +33,8 @@ public struct HSKLineStyle {
     var textColor = UIColor.hschart.color(rgba: "#8695a6")
     var riseColor = UIColor.hschart.color(rgba: "#f24957") // 涨 red
     var fallColor = UIColor.hschart.color(rgba: "#1dbf60") // 跌 green
-    var priceLineCorlor = UIColor.hschart.color(rgba: "#0095ff")
-    var avgLineCorlor = UIColor.hschart.color(rgba: "#ffc004") // 均线颜色
+    var priceLineColor = UIColor.hschart.color(rgba: "#0095ff")
+    var avgLineColor = UIColor.hschart.color(rgba: "#ffc004") // 均线颜色
     var fillColor = UIColor.hschart.color(rgba: "#e3efff")
     
     var baseFont = UIFont.systemFont(ofSize: 10)
@@ -45,5 +45,35 @@ public struct HSKLineStyle {
         let height = ceil(size.height)
         
         return CGSize(width: width, height: height)
+    }
+}
+
+extension HSKLineStyle{
+    public mutating func setupDarkTheme(_ isDark:Bool){
+        if isDark{
+            ma5Color = UIColor.hschart.color(rgba: "#e8de85")
+            ma10Color = UIColor.hschart.color(rgba: "#6fa8bb")
+            ma20Color = UIColor.hschart.color(rgba: "#df8fc6")
+            borderColor = UIColor.hschart.color(rgba: "#171B23")
+            crossLineColor = UIColor.hschart.color(rgba: "#171B23")
+            textColor = UIColor.hschart.color(rgba: "#ffffff").withAlphaComponent(0.3)
+            riseColor = UIColor.hschart.color(rgba: "#FF513F") // 涨 red
+            fallColor = UIColor.hschart.color(rgba: "#4BCCAC ") // 跌 green
+            priceLineColor = UIColor.hschart.color(rgba: "#171B23")
+            avgLineColor = UIColor.hschart.color(rgba: "#171B23") // 均线颜色
+            fillColor = UIColor.hschart.color(rgba: "#1c212c")
+        }else{
+            ma5Color = UIColor.hschart.color(rgba: "#e8de85")
+            ma10Color = UIColor.hschart.color(rgba: "#6fa8bb")
+            ma20Color = UIColor.hschart.color(rgba: "#df8fc6")
+            borderColor = UIColor.hschart.color(rgba: "#e4e4e4")
+            crossLineColor = UIColor.hschart.color(rgba: "#546679")
+            textColor = UIColor.hschart.color(rgba: "#8695a6")
+            riseColor = UIColor.hschart.color(rgba: "#f24957") // 涨 red
+            fallColor = UIColor.hschart.color(rgba: "#1dbf60") // 跌 green
+            priceLineColor = UIColor.hschart.color(rgba: "#0095ff")
+            avgLineColor = UIColor.hschart.color(rgba: "#ffc004") // 均线颜色
+            fillColor = UIColor.hschart.color(rgba: "#e3efff")
+        }
     }
 }

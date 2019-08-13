@@ -40,3 +40,33 @@ public struct HSTimeLineStyle {
         return CGSize(width: width, height: height)
     }
 }
+
+extension HSTimeLineStyle{
+    public mutating func setupDarkTheme(_ isDark:Bool){
+        if isDark{
+             ma5Color = UIColor.hschart.color(rgba: "#e8de85")
+             ma10Color = UIColor.hschart.color(rgba: "#6fa8bb")
+             ma20Color = UIColor.hschart.color(rgba: "#df8fc6")
+             borderColor = UIColor.hschart.color(rgba: "#171B23")
+             crossLineColor = UIColor.hschart.color(rgba: "#FD8A00")
+             textColor = UIColor.hschart.color(rgba: "#ffffff").withAlphaComponent(0.3)
+             riseColor = UIColor.hschart.color(rgba: "#FF513F") // 涨 red
+             fallColor = UIColor.hschart.color(rgba: "#4BCCAC ") // 跌 green
+             priceLineColor = UIColor.hschart.color(rgba: "#3D5AEA")
+             avgLineColor = UIColor.hschart.color(rgba: "#FD8A00") // 均线颜色
+             fillColor = UIColor.hschart.color(rgba: "#262F47")
+        }else{
+            ma5Color = UIColor.hschart.color(rgba: "#e8de85")
+            ma10Color = UIColor.hschart.color(rgba: "#6fa8bb")
+            ma20Color = UIColor.hschart.color(rgba: "#df8fc6")
+            borderColor = UIColor.hschart.color(rgba: "#e4e4e4")
+            crossLineColor = UIColor.hschart.color(rgba: "#546679")
+            textColor = UIColor.hschart.color(rgba: "#8695a6")
+            riseColor = UIColor.hschart.color(rgba: "#f24957") // 涨 red
+            fallColor = UIColor.hschart.color(rgba: "#1dbf60") // 跌 green
+            priceLineColor = UIColor.hschart.color(rgba: "#0095ff")
+            avgLineColor = UIColor.hschart.color(rgba: "#ffc004") // 均线颜色
+            fillColor = UIColor.hschart.color(rgba: "#e3efff")
+        }
+    }
+}

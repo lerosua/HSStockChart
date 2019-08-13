@@ -10,6 +10,8 @@ import UIKit
 
 public class HSTimeLine: UIView, HSDrawLayerProtocol {
     
+    var theme = HSTimeLineStyle()
+
     var timeLineLayer = CAShapeLayer()
     var volumeLayer = CAShapeLayer()
     var maLineLayer = CAShapeLayer()
@@ -42,6 +44,7 @@ public class HSTimeLine: UIView, HSDrawLayerProtocol {
     
     public var isFiveDayTime = false
     public var isLandscapeMode = false
+    public var isDark = false
     
     var volumeStep: CGFloat = 0
     var volumeWidth: CGFloat = 0
@@ -50,6 +53,7 @@ public class HSTimeLine: UIView, HSDrawLayerProtocol {
     
     public var dataT: [HSTimeLineModel] = [] {
         didSet {
+            theme.setupDarkTheme(self.isDark)
             self.drawTimeLineChart()
         }
     }

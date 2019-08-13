@@ -22,6 +22,8 @@ public class HSKLine: UIView, HSDrawLayerProtocol {
     var kLineType: HSChartType = HSChartType.kLineForDay
     var theme = HSKLineStyle()
     
+    public var isDark = false
+
     var dataK: [HSKLineModel] = []
     var positionModels: [HSKLineCoordModel] = []
     var klineModels: [HSKLineModel] = []
@@ -110,6 +112,8 @@ public class HSKLine: UIView, HSDrawLayerProtocol {
     // MARK: - Drawing Function
     
     func drawKLineView() {
+        theme.setupDarkTheme(self.isDark)
+        
         calcMaxAndMinData()
         convertToPositionModel(data: dataK)
 

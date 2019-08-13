@@ -106,6 +106,30 @@ class ChartViewController: UIViewController {
             stockChartView.configureView(data: tmpDataK)
             
             self.view.addSubview(stockChartView)
+            
+        case .kLineForSeason:
+            self.view.addSubview(UIView())
+            let stockChartView = HSKLineView(frame: chartRect, kLineType: .kLineForMonth)
+            stockChartView.tag = chartType.rawValue
+            stockChartView.isLandscapeMode = self.isLandscapeMode
+            let jsonFile = "kLineForMonth"
+            let allDataK = getKLineModelArray(getJsonDataFromFile(jsonFile))
+            let tmpDataK = Array(allDataK[allDataK.count-70..<allDataK.count])
+            stockChartView.configureView(data: tmpDataK)
+            
+            self.view.addSubview(stockChartView)
+            
+        case .kLineForYear:
+            self.view.addSubview(UIView())
+            let stockChartView = HSKLineView(frame: chartRect, kLineType: .kLineForMonth)
+            stockChartView.tag = chartType.rawValue
+            stockChartView.isLandscapeMode = self.isLandscapeMode
+            let jsonFile = "kLineForMonth"
+            let allDataK = getKLineModelArray(getJsonDataFromFile(jsonFile))
+            let tmpDataK = Array(allDataK[allDataK.count-70..<allDataK.count])
+            stockChartView.configureView(data: tmpDataK)
+            
+            self.view.addSubview(stockChartView)
         }
     }
     

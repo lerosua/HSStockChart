@@ -306,12 +306,12 @@
 				TargetAttributes = {
 					C0E750EC224F39BB0072DF6E = {
 						CreatedOnToolsVersion = 10.2;
-						DevelopmentTeam = XC238MH24L;
+						DevelopmentTeam = F247V288VF;
 						ProvisioningStyle = Automatic;
 					};
 					C0E75140224F3A5A0072DF6E = {
 						CreatedOnToolsVersion = 10.2;
-						DevelopmentTeam = XC238MH24L;
+						DevelopmentTeam = F247V288VF;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -583,7 +583,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = XC238MH24L;
+				DEVELOPMENT_TEAM = F247V288VF;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -618,7 +618,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = XC238MH24L;
+				DEVELOPMENT_TEAM = F247V288VF;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -652,7 +652,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = XC238MH24L;
+				DEVELOPMENT_TEAM = F247V288VF;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = HSStockChart_Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
@@ -680,7 +680,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XC238MH24L;
+				DEVELOPMENT_TEAM = F247V288VF;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = HSStockChart_Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
