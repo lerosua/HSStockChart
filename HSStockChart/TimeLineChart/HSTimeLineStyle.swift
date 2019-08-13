@@ -51,7 +51,7 @@ extension HSTimeLineStyle{
              crossLineColor = UIColor.hschart.color(rgba: "#FD8A00")
              textColor = UIColor.hschart.color(rgba: "#ffffff").withAlphaComponent(0.3)
              riseColor = UIColor.hschart.color(rgba: "#FF513F") // 涨 red
-             fallColor = UIColor.hschart.color(rgba: "#4BCCAC ") // 跌 green
+             fallColor = UIColor.hschart.color(rgba: "#4BCCAC") // 跌 green
              priceLineColor = UIColor.hschart.color(rgba: "#3D5AEA")
              avgLineColor = UIColor.hschart.color(rgba: "#FD8A00") // 均线颜色
              fillColor = UIColor.hschart.color(rgba: "#262F47")
