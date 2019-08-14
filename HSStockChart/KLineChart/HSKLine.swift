@@ -118,6 +118,11 @@ public class HSKLine: UIView, HSDrawLayerProtocol {
     func drawKLineView() {
         theme.setupDarkTheme(self.isDark)
         
+        //安全检测
+        if dataK.count == 0{
+            return
+        }
+        
         calcMaxAndMinData()
         convertToPositionModel(data: dataK)
 
