@@ -72,8 +72,8 @@ public class HSKLineView: UIView {
         upFrontView = HSKLineUpFrontView(frame: bounds)
         addSubview(upFrontView)
         
-        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPressGestureAction(_:)))
-        kLine.addGestureRecognizer(longPressGesture)
+//        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPressGestureAction(_:)))
+//        kLine.addGestureRecognizer(longPressGesture)
         let pinGesture = UIPinchGestureRecognizer(target: self, action: #selector(handlePinGestureAction(_:)))
         kLine.addGestureRecognizer(pinGesture)
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTapGestureAction(_:)))
