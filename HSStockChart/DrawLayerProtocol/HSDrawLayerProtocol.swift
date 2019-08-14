@@ -93,7 +93,7 @@ extension HSDrawLayerProtocol {
     
     
     /// 获取纵轴的标签图层
-    func getYAxisMarkLayer(frame: CGRect, text: String, y: CGFloat, isLeft: Bool) -> CATextLayer {
+    func getYAxisMarkLayer(frame: CGRect, text: String, y: CGFloat, isLeft: Bool,color:UIColor) -> CATextLayer {
         let textSize = theme.getTextSize(text: text)
         let yAxisLabelEdgeInset: CGFloat = 5
         var labelX: CGFloat = 0
@@ -108,7 +108,7 @@ extension HSDrawLayerProtocol {
         
         let yMarkLayer = drawTextLayer(frame: CGRect(x: labelX, y: labelY, width: textSize.width, height: textSize.height),
                                        text: text,
-                                       foregroundColor: theme.textColor)
+                                       foregroundColor: color)
         
         return yMarkLayer
     }

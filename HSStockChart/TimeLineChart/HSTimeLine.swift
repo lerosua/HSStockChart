@@ -208,14 +208,14 @@ public class HSTimeLine: UIView, HSDrawLayerProtocol {
         // 画纵坐标的最高和最低价格标签
         let maxPriceStr = maxPrice.hschart.toStringWithFormat(".2")
         let minPriceStr = minPrice.hschart.toStringWithFormat(".2")
-        yAxisLayer.addSublayer(getYAxisMarkLayer(frame: frame, text: maxPriceStr, y: theme.viewMinYGap, isLeft: false))
-        yAxisLayer.addSublayer(getYAxisMarkLayer(frame: frame, text: minPriceStr, y: uperChartDrawAreaBottom, isLeft: false))
+        yAxisLayer.addSublayer(getYAxisMarkLayer(frame: frame, text: maxPriceStr, y: theme.viewMinYGap, isLeft: true,color:theme.riseColor))
+        yAxisLayer.addSublayer(getYAxisMarkLayer(frame: frame, text: minPriceStr, y: uperChartDrawAreaBottom, isLeft: true,color:theme.fallColor))
         
         // 最高成交量标签及其横线
         let y = frame.height - maxVolume * volumeUnit
         let maxVolumeStr = maxVolume.hschart.toStringWithFormat(".2")
-        yAxisLayer.addSublayer(getYAxisMarkLayer(frame: frame, text: maxVolumeStr, y: y, isLeft: false))
-        
+        yAxisLayer.addSublayer(getYAxisMarkLayer(frame: frame, text: maxVolumeStr, y: y, isLeft: false,color:theme.textColor))
+
         let maxVolLine = UIBezierPath()
         maxVolLine.move(to: CGPoint(x: 0, y: y))
         maxVolLine.addLine(to: CGPoint(x: frame.width, y: y))
@@ -229,8 +229,8 @@ public class HSTimeLine: UIView, HSDrawLayerProtocol {
         // 画比率标签
         let maxRatioStr = (self.maxRatio * 100).hschart.toPercentFormat()
         let minRatioStr = (self.minRatio * 100).hschart.toPercentFormat()
-        yAxisLayer.addSublayer(getYAxisMarkLayer(frame: frame, text: maxRatioStr, y: uperChartDrawAreaTop, isLeft: true))
-        yAxisLayer.addSublayer(getYAxisMarkLayer(frame: frame, text: minRatioStr, y: uperChartDrawAreaBottom, isLeft: true))
+        yAxisLayer.addSublayer(getYAxisMarkLayer(frame: frame, text: maxRatioStr, y: uperChartDrawAreaTop, isLeft: false,color:theme.riseColor))
+        yAxisLayer.addSublayer(getYAxisMarkLayer(frame: frame, text: minRatioStr, y: uperChartDrawAreaBottom, isLeft: false,color:theme.fallColor))
         
         // 中间横虚线及其标签
         if let temp = dataT.first {
@@ -250,7 +250,8 @@ public class HSTimeLine: UIView, HSDrawLayerProtocol {
             dashLineLayer.lineDashPattern = [6, 3]
             yAxisLayer.addSublayer(dashLineLayer)
             
-            yAxisLayer.addSublayer(getYAxisMarkLayer(frame: frame, text: price.hschart.toStringWithFormat(".2"), y: preClosePriceYaxis, isLeft: false))
+            yAxisLayer.addSublayer(getYAxisMarkLayer(frame: frame, text: price.hschart.toStringWithFormat(".2"), y: preClosePriceYaxis, isLeft: true,color:theme.textColor))
+            yAxisLayer.addSublayer(getYAxisMarkLayer(frame: frame, text: "0.00%", y: preClosePriceYaxis, isLeft: false,color:theme.textColor))
         }
         
         self.layer.addSublayer(yAxisLayer)
