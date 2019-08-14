@@ -40,7 +40,7 @@ public class HSTimeLine: UIView, HSDrawLayerProtocol {
     
     fileprivate let openTime: String = "9:00"
     fileprivate let middleTime: String = "12:00/13:00"
-    fileprivate let closeTime: String = "14:00"
+    fileprivate let closeTime: String = "16:00"
     
     public var isFiveDayTime = false
     public var isLandscapeMode = false
