@@ -38,9 +38,9 @@ public class HSTimeLine: UIView, HSDrawLayerProtocol {
     /// Number of Dot in Five Day TimeLine 五日分时线总横坐标
     let fiveDayCount = 120
     
-    fileprivate let openTime: String = "9:30"
-    fileprivate let middleTime: String = "11:30/13:00"
-    fileprivate let closeTime: String = "15:00"
+    fileprivate let openTime: String = "9:00"
+    fileprivate let middleTime: String = "12:00/13:00"
+    fileprivate let closeTime: String = "14:00"
     
     public var isFiveDayTime = false
     public var isLandscapeMode = false
